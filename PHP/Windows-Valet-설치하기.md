@@ -50,6 +50,19 @@ valet 명령어를 사용하기 위해서는 composer global 패키지를 Path�
 
 `디렉토리명.app`으로 접근할 수 있다.
 
+#### Valet으로 띄운 프로젝트에 접근이 안될때
+`valet-for-windows`를 사용할때 dnsmasq인 Acrylic DNS Proxy가 윈도우10에서 제대로 동작하지 않는 경우가 있다.
+
+`$ valet tld localhost`를 이용해서 `.localhost`를 tld로 사용하면 동작하긴 하지만, 이것은 어디까지나 임시방편이고,<br/>
+[Acrylic DNS Proxy Windows 10 Configuration](https://mayakron.altervista.org/wikibase/show.php?id=AcrylicWindows10Configuration)을 먼저 설정 한 후,<br/>
+`%appdata%\Composer\vendor\cretueusebiu\valet-windows\bin\acrylic\AcrylicConfiguration.ini`의 `LocalIPv4BindingAddress` 값을 `0.0.0.0` 에서 `127.0.0.1`으로 변경하고
+`$ valet restart`를 실행하여 주면된다.
+
+기본적으로 https로 요청을 하기때문에 http로 프로토콜을 바꿔주면 성공 할 수 있다.
+
+[AcrylicDNS not working](https://github.com/cretueusebiu/valet-windows/issues/91)
+
+
 ## 참고자료
 
 > [정광섭님 - Windows 에서 Valet 으로 PHP 개발 환경 만들기](https://www.lesstif.com/pages/viewpage.action?pageId=39126153)
