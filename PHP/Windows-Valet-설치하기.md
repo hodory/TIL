@@ -63,6 +63,9 @@ valet 명령어를 사용하기 위해서는 composer global 패키지를 Path�
 [AcrylicDNS not working](https://github.com/cretueusebiu/valet-windows/issues/91)
 
 
+**Homestead와 달리 MYSQL을 별도로 설치해주어야한다.**
+
+
 ## 참고자료
 
 > [정광섭님 - Windows 에서 Valet 으로 PHP 개발 환경 만들기](https://www.lesstif.com/pages/viewpage.action?pageId=39126153)
