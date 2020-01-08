@@ -26,6 +26,13 @@ extension=mbstring
 extension=openssl
 ```
 
+PHPUnit을 사용할때에는 기본적으로 phpunit.xml 파일에 `DB_CONNECTION`이 `sqlite`로 되어있고,<br/>
+`DB_DATABASE`는 `memory`로 되어있기 때문에 `pdo_sqlite`의 주석도 풀어주도록 한다.
+ 
+```ini
+extension=pdo_sqlite
+```
+
 ## Composer 설치하기
 ```
 scoop install composer
