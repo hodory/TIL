@@ -1,0 +1,9 @@
+# 200617
+
+## 다중 설정 클래스
+
+WebSecurityConfigurationAdapter 클래스를 상속받은 SecurityConfig 클래스가 여러개더라도<br/>
+FilterChainProxy에 설정 클래스별로 필터가 생성된다
+
+FilterChainProxy가 요청에 따라 antMatchet가 match 되는 필터가 동작되도록한다.
+(모든 필터의 antMatcher에 맞게 실행되는게 아님)
